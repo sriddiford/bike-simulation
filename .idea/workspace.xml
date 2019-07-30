@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7452e411-bf04-48d0-b854-4b207803deb8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/parsing/InstructionParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/world/WorldState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bike-simulator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bike-simulator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/direction/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/direction/Direction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/instruction/ForwardInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/instruction/ForwardInstruction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/instruction/GPSReportInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/instruction/GPSReportInstruction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/instruction/Instruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/instruction/Instruction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/instruction/PlaceInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/instruction/PlaceInstruction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/instruction/TurnLeftInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/instruction/TurnLeftInstruction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/instruction/TurnRightInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/instruction/TurnRightInstruction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/resources/Example1" beforeDir="false" afterPath="$PROJECT_DIR$/test/resources/Example1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/resources/Example2" beforeDir="false" afterPath="$PROJECT_DIR$/test/resources/Example2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/resources/Example3" beforeDir="false" afterPath="$PROJECT_DIR$/test/resources/Example3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,9 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -84,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564471453351</updated>
-      <workItem from="1564471456238" duration="1525000" />
+      <workItem from="1564471456238" duration="3016000" />
     </task>
     <servers />
   </component>
