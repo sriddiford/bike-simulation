@@ -1,4 +1,9 @@
 package instruction;
 
-public class ForwardInstruction {
+public class ForwardInstruction implements Instruction {
+
+    @Override
+    public void execute() {
+        // TODO
+    }
 }

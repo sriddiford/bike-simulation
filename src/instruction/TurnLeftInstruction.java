@@ -1,4 +1,9 @@
 package instruction;
 
-public class TurnLeftInstruction {
+public class TurnLeftInstruction implements Instruction {
+
+    @Override
+    public void execute() {
+        // TODO
+    }
 }
