@@ -1,9 +1,9 @@
 package instruction;
 
-import world.WorldState;
+import world.WorldGrid;
 
 public interface Instruction {
 
-    WorldState execute();
+    WorldGrid execute();
 
 }

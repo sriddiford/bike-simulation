@@ -1,7 +1,7 @@
 package instruction;
 
 import direction.Direction;
-import world.WorldState;
+import world.WorldGrid;
 
 public class PlaceInstruction implements Instruction {
 
@@ -10,7 +10,7 @@ public class PlaceInstruction implements Instruction {
     private Direction direction;
 
     @Override
-    public WorldState execute() { // refactor to return the grid/world
+    public WorldGrid execute() { // refactor to return the grid/world
 
     }
 }

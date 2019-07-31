@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7452e411-bf04-48d0-b854-4b207803deb8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/parsing/InstructionParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/world/WorldState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/EastFacingState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/FacingDirectionState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/NorthFacingState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/SouthFacingState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/WestFacingState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/instruction/ForwardInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/instruction/ForwardInstruction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/instruction/GPSReportInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/instruction/GPSReportInstruction.java" afterDir="false" />
@@ -11,6 +14,9 @@
       <change beforePath="$PROJECT_DIR$/src/instruction/PlaceInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/instruction/PlaceInstruction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/instruction/TurnLeftInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/instruction/TurnLeftInstruction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/instruction/TurnRightInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/instruction/TurnRightInstruction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsing/InstructionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsing/InstructionParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/world/WorldState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/world/WorldGrid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/world/WorldStateBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/world/WorldStateBuilder.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -81,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564471453351</updated>
-      <workItem from="1564471456238" duration="3016000" />
+      <workItem from="1564471456238" duration="5361000" />
     </task>
     <servers />
   </component>

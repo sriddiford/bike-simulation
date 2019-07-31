@@ -1,11 +1,11 @@
 package instruction;
 
-import world.WorldState;
+import world.WorldGrid;
 
 public class ForwardInstruction implements Instruction {
 
     @Override
-    public WorldState execute() {
+    public WorldGrid execute() {
         // TODO
     }
 }

@@ -1,11 +1,11 @@
 package instruction;
 
-import world.WorldState;
+import world.WorldGrid;
 
 public class TurnRightInstruction implements Instruction {
 
     @Override
-    public WorldState execute() {
+    public WorldGrid execute() {
         // TODO
     }
 }

@@ -3,7 +3,7 @@ package world;
 import direction.Direction;
 import instruction.Instruction;
 
-public class WorldState {
+public class WorldGrid {
 
     private final int xDimensionLimit;
     private final int yDimensionLimit;
@@ -12,7 +12,7 @@ public class WorldState {
     private int bikeYLocation;
     private Direction bikeFacingDirection;
 
-    public WorldState(int xDimensionLimit, int yDimensionLimit, int bikeXLocation, int bikeYLocation, Direction bikeFacingDirection) {
+    public WorldGrid(int xDimensionLimit, int yDimensionLimit, int bikeXLocation, int bikeYLocation, Direction bikeFacingDirection) {
         this.xDimensionLimit = xDimensionLimit;
         this.yDimensionLimit = yDimensionLimit;
         this.bikeXLocation = bikeXLocation;
@@ -40,7 +40,7 @@ public class WorldState {
         return bikeFacingDirection;
     }
 
-    public WorldState apply(Instruction instruction) {
+    public WorldGrid apply(Instruction instruction) {
         instruction.execute();
     }
 

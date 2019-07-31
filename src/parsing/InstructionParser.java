@@ -10,5 +10,7 @@ public interface InstructionParser {
 
     List<Instruction> parseInstructions();
 
-    List<Instruction> parseInstructions
+    List<Instruction> parseInstructions();
+
+    // thinking how to separate these
 }

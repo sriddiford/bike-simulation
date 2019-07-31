@@ -3,6 +3,7 @@ package world;
 import direction.Direction;
 
 public class WorldStateBuilder {
+
     private int xDimensionLimit;
     private int yDimensionLimit;
     private int bikeXLocation;
@@ -34,7 +35,7 @@ public class WorldStateBuilder {
         return this;
     }
 
-    public WorldState createWorldState() {
-        return new WorldState(xDimensionLimit, yDimensionLimit, bikeXLocation, bikeYLocation, bikeFacingDirection);
+    public WorldGrid createWorldState() {
+        return new WorldGrid(xDimensionLimit, yDimensionLimit, bikeXLocation, bikeYLocation, bikeFacingDirection);
     }
 }
