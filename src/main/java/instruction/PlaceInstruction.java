@@ -1,6 +1,7 @@
 package instruction;
 
 import bike.VirtualBike;
+import state.CardinalDirection;
 
 public class PlaceInstruction implements Instruction {
 

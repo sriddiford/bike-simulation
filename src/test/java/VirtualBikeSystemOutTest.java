@@ -1,12 +1,11 @@
 import bike.VirtualBike;
 import bike.VirtualRider;
-import instruction.CardinalDirection;
+import instruction.ForwardInstruction;
+import instruction.GPSReportInstruction;
+import instruction.Instruction;
 import instruction.PlaceInstruction;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import state.NorthFacing;
-import state.SouthFacing;
+import org.junit.jupiter.api.*;
+import state.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -15,23 +14,21 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class VirtualBikeSystemOutTest {
 
-    private static final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    private static final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+    // holds System.out output
+    private static ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private static final PrintStream originalOut = System.out;
-    private static final PrintStream originalErr = System.err;
 
-    // https://stackoverflow.com/questions/1119385/junit-test-for-system-out-println
-
-    @BeforeAll
-    public static void setUpStreams() {
+    @BeforeEach
+    public void setUpStreams() {
+        // redirects System.out to allow its output to be tested
+        outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
-        System.setErr(new PrintStream(errContent));
     }
 
     @AfterAll
     public static void restoreStreams() {
+        // restore System.out to original output stream
         System.setOut(originalOut);
-        System.setErr(originalErr);
     }
 
     @Test
@@ -52,18 +49,85 @@ public class VirtualBikeSystemOutTest {
     public void placeTest() {
         VirtualBike virtualBike = new VirtualBike(1, 2);
         virtualBike.setFacingDirection(new NorthFacing(virtualBike));
-        PlaceInstruction placeInstruction = new PlaceInstruction(virtualBike, 6, 5, CardinalDirection.EAST);
+        Instruction placeInstruction = new PlaceInstruction(virtualBike, 6, 5, CardinalDirection.EAST);
+
+        VirtualRider rider = new VirtualRider();
+        rider.setInstruction(placeInstruction);
+        rider.completeInstruction();
+
+        Instruction gpsReport = new GPSReportInstruction(virtualBike);
+        rider.setInstruction(gpsReport);
+        rider.completeInstruction();
+        assertThat(outContent.toString()).isEqualTo("(6,5), EAST");
+    }
+
+    @Test
+    public void badPlaceTest() {
+        VirtualBike virtualBike = new VirtualBike(1, 2);
+        virtualBike.setFacingDirection(new NorthFacing(virtualBike));
+        Instruction placeInstruction = new PlaceInstruction(virtualBike, 8, 8, CardinalDirection.EAST);
 
         VirtualRider rider = new VirtualRider();
         rider.setInstruction(placeInstruction);
         rider.completeInstruction();
 
         virtualBike.GPSReport();
-        assertThat(outContent.toString()).isEqualTo("(6,5), EAST");
+        assertThat(outContent.toString()).isEqualTo("(1,2), NORTH");
     }
 
     @Test
-    public void badPlaceTest() {
-        
+    public void southMoveForwardTest() {
+        VirtualBike virtualBike = new VirtualBike(1, 2);
+        virtualBike.setFacingDirection(new SouthFacing(virtualBike));
+
+        Instruction forwardInstruction = new ForwardInstruction(virtualBike);
+        VirtualRider rider = new VirtualRider();
+        rider.setInstruction(forwardInstruction);
+        rider.completeInstruction();
+
+        virtualBike.GPSReport();
+        assertThat(outContent.toString()).isEqualTo("(1,1), SOUTH");
+    }
+
+    @Test
+    public void northMoveForwardTest() {
+        VirtualBike virtualBike = new VirtualBike(1, 2);
+        virtualBike.setFacingDirection(new NorthFacing(virtualBike));
+
+        Instruction forwardInstruction = new ForwardInstruction(virtualBike);
+        VirtualRider rider = new VirtualRider();
+        rider.setInstruction(forwardInstruction);
+        rider.completeInstruction();
+
+        virtualBike.GPSReport();
+        assertThat(outContent.toString()).isEqualTo("(1,3), NORTH");
+    }
+
+    @Test
+    public void eastMoveForwardTest() {
+        VirtualBike virtualBike = new VirtualBike(1, 2);
+        virtualBike.setFacingDirection(new EastFacing(virtualBike));
+
+        Instruction forwardInstruction = new ForwardInstruction(virtualBike);
+        VirtualRider rider = new VirtualRider();
+        rider.setInstruction(forwardInstruction);
+        rider.completeInstruction();
+
+        virtualBike.GPSReport();
+        assertThat(outContent.toString()).isEqualTo("(2,2), EAST");
+    }
+
+    @Test
+    public void westMoveForwardTest() {
+        VirtualBike virtualBike = new VirtualBike(1, 2);
+        virtualBike.setFacingDirection(new WestFacing(virtualBike));
+
+        Instruction forwardInstruction = new ForwardInstruction(virtualBike);
+        VirtualRider rider = new VirtualRider();
+        rider.setInstruction(forwardInstruction);
+        rider.completeInstruction();
+
+        virtualBike.GPSReport();
+        assertThat(outContent.toString()).isEqualTo("(0,2), WEST");
     }
 }

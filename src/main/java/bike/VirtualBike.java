@@ -1,6 +1,5 @@
 package bike;
 
-import instruction.CardinalDirection;
 import state.*;
 
 public class VirtualBike {

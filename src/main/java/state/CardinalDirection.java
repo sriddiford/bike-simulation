@@ -1,10 +1,8 @@
-package instruction;
+package state;
 
 public enum CardinalDirection {
-
     NORTH,
     EAST,
     SOUTH,
     WEST
-
 }
