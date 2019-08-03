@@ -1,13 +1,13 @@
 package instruction;
 
-import bike.Bike;
+import bike.VirtualBike;
 
 public class TurnLeftInstruction implements Instruction {
 
-    Bike bike;
+    VirtualBike virtualBike;
 
     @Override
     public void execute() {
-        bike.turnLeft();
+        virtualBike.turnLeft();
     }
 }

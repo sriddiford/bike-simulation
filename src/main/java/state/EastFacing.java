@@ -1,30 +1,30 @@
 package state;
 
-import bike.Bike;
+import bike.VirtualBike;
 
 public class EastFacing extends FacingDirection {
 
-    private Bike bike;
+    private VirtualBike virtualBike;
 
-    public EastFacing(Bike bike) {
-        this.bike = bike;
+    public EastFacing(VirtualBike virtualBike) {
+        this.virtualBike = virtualBike;
     }
 
     @Override
     public void forward() {
-        if (bike.getxCoordinate() < bike.getxLimit()) {
-            bike.setxCoordinate(bike.getxCoordinate() + 1);
+        if (virtualBike.getxCoordinate() < virtualBike.getxLimit()) {
+            virtualBike.setxCoordinate(virtualBike.getxCoordinate() + 1);
         }
     }
 
     @Override
     public void turnLeft() {
-        bike.setCurrentDirection(bike.getNorthFacingDirection());
+        virtualBike.setFacingDirection(virtualBike.getNorthFacingDirection());
     }
 
     @Override
     public void turnRight() {
-        bike.setCurrentDirection(bike.getSouthFacingDirection());
+        virtualBike.setFacingDirection(virtualBike.getSouthFacingDirection());
     }
 
     @Override

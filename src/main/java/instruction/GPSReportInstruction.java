@@ -1,10 +1,10 @@
 package instruction;
 
-import bike.Bike;
+import bike.VirtualBike;
 
 public class GPSReportInstruction implements Instruction {
 
-    Bike bike;
+    VirtualBike virtualBike;
 
     @Override
     public void execute() {

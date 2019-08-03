@@ -1,8 +1,11 @@
-import bike.Bike;
+import bike.VirtualBike;
+import bike.VirtualRider;
+import instruction.CardinalDirection;
+import instruction.PlaceInstruction;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import state.EastFacing;
+import state.NorthFacing;
 import state.SouthFacing;
 
 import java.io.ByteArrayOutputStream;
@@ -10,7 +13,7 @@ import java.io.PrintStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BikeSystemOutTest {
+public class VirtualBikeSystemOutTest {
 
     private static final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private static final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
@@ -39,9 +42,28 @@ public class BikeSystemOutTest {
 
     @Test
     public void gpsReportFormatTest() {
-        Bike bike = new Bike(1, 2);
-        bike.setCurrentDirection(new SouthFacing(bike));
-        bike.GPSReport();
+        VirtualBike virtualBike = new VirtualBike(1, 2);
+        virtualBike.setFacingDirection(new SouthFacing(virtualBike));
+        virtualBike.GPSReport();
         assertThat(outContent.toString()).isEqualTo("(1,2), SOUTH");
+    }
+
+    @Test
+    public void placeTest() {
+        VirtualBike virtualBike = new VirtualBike(1, 2);
+        virtualBike.setFacingDirection(new NorthFacing(virtualBike));
+        PlaceInstruction placeInstruction = new PlaceInstruction(virtualBike, 6, 5, CardinalDirection.EAST);
+
+        VirtualRider rider = new VirtualRider();
+        rider.setInstruction(placeInstruction);
+        rider.completeInstruction();
+
+        virtualBike.GPSReport();
+        assertThat(outContent.toString()).isEqualTo("(6,5), EAST");
+    }
+
+    @Test
+    public void badPlaceTest() {
+        
     }
 }

@@ -1,13 +1,13 @@
 package instruction;
 
-import bike.Bike;
+import bike.VirtualBike;
 
 public class ForwardInstruction implements Instruction {
 
-    Bike bike;
+    VirtualBike virtualBike;
 
     @Override
     public void execute() {
-        bike.forward();
+        virtualBike.forward();
     }
 }
