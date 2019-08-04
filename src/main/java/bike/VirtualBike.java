@@ -3,11 +3,9 @@ package bike;
 import bike.direction.CardinalDirection;
 import bike.state.*;
 
-import static bike.direction.CardinalDirection.*;
-
 public class VirtualBike {
 
-    private int xLimit = 7; // TODO use a bike builder and set these programmatically
+    private int xLimit = 7;
     private int yLimit = 7;
 
     private int xCoordinate;
@@ -66,8 +64,6 @@ public class VirtualBike {
                 return true;
             case WEST:
                 this.facingDirection = this.getWestFacingDirection();
-                return true;
-            case UNDEFINED:
                 return true;
         }
         return false;

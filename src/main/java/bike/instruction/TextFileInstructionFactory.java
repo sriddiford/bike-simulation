@@ -12,15 +12,10 @@ public class TextFileInstructionFactory implements InstructionFactory {
     private static final Pattern PLACE_INSTRUCTION =
             Pattern.compile("PLACE (?<xCoord>(\\d*?)),(?<yCoord>(\\d*?)),(?<direction>(NORTH|EAST|SOUTH|WEST))");
 
-    VirtualBike bike;
+    private VirtualBike bike;
 
     public TextFileInstructionFactory(VirtualBike bike) {
         this.bike = bike;
-    }
-
-    @Override
-    public boolean validInstruction(String input) {
-        return false;
     }
 
     @Override
@@ -29,7 +24,7 @@ public class TextFileInstructionFactory implements InstructionFactory {
         if (matcher.find()) {
             int xCoord = Integer.parseInt(matcher.group("xCoord"));
             int yCoord = Integer.parseInt(matcher.group("yCoord"));
-            CardinalDirection direction;
+            CardinalDirection direction = null;
             switch (matcher.group("direction")) {
                 case "NORTH":
                     direction = CardinalDirection.NORTH;
@@ -42,10 +37,6 @@ public class TextFileInstructionFactory implements InstructionFactory {
                     break;
                 case "WEST":
                     direction = CardinalDirection.WEST;
-                    break;
-                default:
-                    // should never be reached
-                    direction = CardinalDirection.UNDEFINED;
                     break;
             }
             return new PlaceInstruction(bike, xCoord, yCoord , direction);

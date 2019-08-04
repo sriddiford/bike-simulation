@@ -9,7 +9,7 @@ public class PlaceInstruction implements Instruction {
 
     private int newXCoordinate;
     private int newYCoordinate;
-    private CardinalDirection newDirection;;
+    private CardinalDirection newDirection;
 
     public PlaceInstruction(VirtualBike virtualBike, int newXCoordinate, int newYCoordinate, CardinalDirection newDirection) {
         this.virtualBike = virtualBike;

@@ -2,14 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7452e411-bf04-48d0-b854-4b207803deb8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/FileReadingTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Example1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Example2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Example3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bike/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bike/VirtualBike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/VirtualBike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bike/direction/CardinalDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/direction/CardinalDirection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bike/instruction/InstructionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/instruction/InstructionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bike/instruction/TextFileInstructionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/instruction/TextFileInstructionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bike/instruction/command/ForwardInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/instruction/command/ForwardInstruction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bike/instruction/command/GPSReportInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/instruction/command/GPSReportInstruction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bike/instruction/command/Instruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/instruction/command/Instruction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bike/instruction/command/PlaceInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/instruction/command/PlaceInstruction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bike/instruction/command/TurnLeftInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/instruction/command/TurnLeftInstruction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bike/instruction/command/TurnRightInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/instruction/command/TurnRightInstruction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bike/state/EastFacing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/state/EastFacing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bike/state/FacingDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/state/FacingDirection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bike/state/NorthFacing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/state/NorthFacing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bike/state/SouthFacing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/state/SouthFacing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bike/state/UndefinedFacing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bike/state/WestFacing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bike/state/WestFacing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FileReadingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FileReadingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/InstructionFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InstructionFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bike/Simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike/Simulation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bike/VirtualBike$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike/VirtualBike$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bike/VirtualBike.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike/VirtualBike.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bike/direction/CardinalDirection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike/direction/CardinalDirection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bike/instruction/InstructionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike/instruction/InstructionFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bike/instruction/TextFileInstructionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike/instruction/TextFileInstructionFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bike/instruction/command/ForwardInstruction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike/instruction/command/ForwardInstruction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bike/instruction/command/GPSReportInstruction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike/instruction/command/GPSReportInstruction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bike/instruction/command/TurnLeftInstruction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike/instruction/command/TurnLeftInstruction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bike/instruction/command/TurnRightInstruction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike/instruction/command/TurnRightInstruction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bike/state/EastFacing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike/state/EastFacing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bike/state/NorthFacing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike/state/NorthFacing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bike/state/SouthFacing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike/state/SouthFacing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bike/state/UndefinedFacing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bike/state/WestFacing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bike/state/WestFacing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/FileReadingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FileReadingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/InstructionFactoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/InstructionFactoryTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,30 +135,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileReadingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileReadingTest.fileNotFoundTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bike-simulator" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FileReadingTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileReadingTest.example1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="bike-simulator" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FileReadingTest" />
-      <option name="METHOD_NAME" value="example1Test" />
+      <option name="METHOD_NAME" value="fileNotFoundTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VirtualBikeOutputTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InstructionFactoryTest.invalidInstructionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bike-simulator" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VirtualBikeOutputTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="InstructionFactoryTest" />
+      <option name="METHOD_NAME" value="invalidInstructionTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InstructionFactoryTest.nullStringInstructionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bike-simulator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="InstructionFactoryTest" />
+      <option name="METHOD_NAME" value="nullStringInstructionTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -135,10 +168,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in bike-simulator" />
-        <item itemvalue="JUnit.FileReadingTest" />
-        <item itemvalue="JUnit.FileReadingTest.example1Test" />
+        <item itemvalue="JUnit.FileReadingTest.fileNotFoundTest" />
+        <item itemvalue="JUnit.InstructionFactoryTest.invalidInstructionTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.VirtualBikeOutputTest" />
+        <item itemvalue="JUnit.InstructionFactoryTest.nullStringInstructionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -156,7 +189,7 @@
       <workItem from="1564657579702" duration="2757000" />
       <workItem from="1564798113906" duration="20957000" />
       <workItem from="1564888714155" duration="983000" />
-      <workItem from="1564890588657" duration="8316000" />
+      <workItem from="1564890588657" duration="14298000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,6 @@
 package bike.state;
 
 import bike.VirtualBike;
-import bike.state.FacingDirection;
 
 public class EastFacing implements FacingDirection {
 

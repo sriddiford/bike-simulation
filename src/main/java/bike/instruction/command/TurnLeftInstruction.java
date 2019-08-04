@@ -4,7 +4,7 @@ import bike.VirtualBike;
 
 public class TurnLeftInstruction implements Instruction {
 
-    VirtualBike virtualBike;
+    private VirtualBike virtualBike;
 
     public TurnLeftInstruction(VirtualBike virtualBike) {
         this.virtualBike = virtualBike;

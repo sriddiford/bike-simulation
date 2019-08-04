@@ -4,7 +4,7 @@ import bike.VirtualBike;
 
 public class GPSReportInstruction implements Instruction {
 
-    VirtualBike virtualBike;
+    private VirtualBike virtualBike;
 
     public GPSReportInstruction(VirtualBike virtualBike) {
         this.virtualBike = virtualBike;

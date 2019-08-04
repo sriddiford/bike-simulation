@@ -4,7 +4,7 @@ import bike.VirtualBike;
 
 public class ForwardInstruction implements Instruction {
 
-    VirtualBike virtualBike;
+    private VirtualBike virtualBike;
 
     public ForwardInstruction(VirtualBike virtualBike) {
         this.virtualBike = virtualBike;
