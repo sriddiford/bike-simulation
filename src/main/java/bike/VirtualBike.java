@@ -1,6 +1,9 @@
 package bike;
 
-import state.*;
+import bike.direction.CardinalDirection;
+import bike.state.*;
+
+import static bike.direction.CardinalDirection.*;
 
 public class VirtualBike {
 
@@ -9,27 +12,23 @@ public class VirtualBike {
 
     private int xCoordinate;
     private int yCoordinate;
-
-    private FacingDirection northFacingDirection;
-    private FacingDirection southFacingDirection;
-    private FacingDirection eastFacingDirection;
-    private FacingDirection westFacingDirection;
-
     private FacingDirection facingDirection;
 
+    private FacingDirection northFacingDirection = new NorthFacing(this);
+    private FacingDirection southFacingDirection = new SouthFacing(this);
+    private FacingDirection eastFacingDirection = new EastFacing(this);
+    private FacingDirection westFacingDirection = new WestFacing(this);
+
     public VirtualBike(int xCoordinate, int yCoordinate) {
-        this(xCoordinate, yCoordinate, new UndefinedFacing());
+        this.xCoordinate = xCoordinate;
+        this.yCoordinate = yCoordinate;
+        this.facingDirection = new NorthFacing(this);
     }
 
     public VirtualBike(int xCoordinate, int yCoordinate, FacingDirection facingDirection) {
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
         this.facingDirection = facingDirection;
-
-        northFacingDirection = new NorthFacing(this);
-        southFacingDirection = new SouthFacing(this);
-        eastFacingDirection = new EastFacing(this);
-        westFacingDirection = new WestFacing(this);
     }
 
     public void turnRight() {
@@ -45,7 +44,7 @@ public class VirtualBike {
     }
 
     public void GPSReport() {
-        System.out.printf("(%d,%d), %s", this.xCoordinate, this.yCoordinate, this.facingDirection);
+        System.out.printf("(%d,%d), %s", this.xCoordinate, this.yCoordinate, this.facingDirection.toString());
     }
 
     public void place(int newXCoordinate, int newYCoordinate, CardinalDirection newDirection) {
@@ -66,6 +65,8 @@ public class VirtualBike {
                 break;
             case WEST:
                 this.facingDirection = this.getWestFacingDirection();
+                break;
+            case UNDEFINED:
                 break;
         }
     }
@@ -114,5 +115,7 @@ public class VirtualBike {
         this.facingDirection = facingDirection;
     }
 
-
+    public FacingDirection getFacingDirection() {
+        return facingDirection;
+    }
 }
