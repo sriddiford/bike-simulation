@@ -18,6 +18,10 @@ public class Simulation {
         this.rider = new VirtualRider();
     }
 
+    public void start() {
+
+    }
+
     public void simulateInstruction(String input) {
         Instruction instruction1 = factory.fromInput(input);
         if (instruction1 instanceof PlaceInstruction) {
