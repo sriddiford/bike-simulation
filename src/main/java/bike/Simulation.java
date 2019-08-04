@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Simulation {
+public final class Simulation {
 
     private InstructionFactory factory;
     private VirtualRider rider;

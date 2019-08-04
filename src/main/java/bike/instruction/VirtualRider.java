@@ -3,7 +3,10 @@ package bike.instruction;
 import bike.instruction.command.Instruction;
 import bike.instruction.command.NoInstruction;
 
-public class VirtualRider {
+/**
+ * Invoker of the Instruction commands
+ */
+public final class VirtualRider {
 
     private Instruction instruction;
 

@@ -3,7 +3,7 @@ package bike.instruction.command;
 import bike.VirtualBike;
 import bike.direction.CardinalDirection;
 
-public class PlaceInstruction implements Instruction {
+public final class PlaceInstruction implements Instruction {
 
     private VirtualBike virtualBike;
 

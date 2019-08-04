@@ -2,7 +2,7 @@ package bike.instruction.command;
 
 import bike.VirtualBike;
 
-public class GPSReportInstruction implements Instruction {
+public final class GPSReportInstruction implements Instruction {
 
     private VirtualBike virtualBike;
 

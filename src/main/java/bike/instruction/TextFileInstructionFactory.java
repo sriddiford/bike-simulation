@@ -7,7 +7,7 @@ import bike.instruction.command.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class TextFileInstructionFactory implements InstructionFactory {
+public final class TextFileInstructionFactory implements InstructionFactory {
 
     private static final Pattern PLACE_INSTRUCTION =
             Pattern.compile("PLACE (?<xCoord>(\\d*?)),(?<yCoord>(\\d*?)),(?<direction>(NORTH|EAST|SOUTH|WEST))");

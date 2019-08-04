@@ -2,7 +2,7 @@ package bike.instruction.command;
 
 import bike.VirtualBike;
 
-public class ForwardInstruction implements Instruction {
+public final class ForwardInstruction implements Instruction {
 
     private VirtualBike virtualBike;
 

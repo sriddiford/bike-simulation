@@ -3,7 +3,7 @@ package bike;
 import bike.direction.CardinalDirection;
 import bike.state.*;
 
-public class VirtualBike {
+public final class VirtualBike {
 
     private int xLimit = 7;
     private int yLimit = 7;

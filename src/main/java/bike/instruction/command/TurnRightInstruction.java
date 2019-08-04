@@ -2,7 +2,7 @@ package bike.instruction.command;
 
 import bike.VirtualBike;
 
-public class TurnRightInstruction implements Instruction {
+public final class TurnRightInstruction implements Instruction {
 
     private VirtualBike virtualBike;
 
