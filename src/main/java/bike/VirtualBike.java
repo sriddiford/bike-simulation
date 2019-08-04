@@ -31,44 +31,46 @@ public class VirtualBike {
         this.facingDirection = facingDirection;
     }
 
-    public void turnRight() {
-        facingDirection.turnRight();
+    public boolean turnRight() {
+        return facingDirection.turnRight();
     }
 
-    public void turnLeft() {
-        facingDirection.turnLeft();
+    public boolean turnLeft() {
+        return facingDirection.turnLeft();
     }
 
-    public void forward() {
-        facingDirection.forward();
+    public boolean forward() {
+        return facingDirection.forward();
     }
 
-    public void GPSReport() {
-        System.out.printf("(%d,%d), %s", this.xCoordinate, this.yCoordinate, this.facingDirection.toString());
+    public boolean GPSReport() {
+        System.out.printf("(%d,%d), %s\n", this.xCoordinate, this.yCoordinate, this.facingDirection.toString());
+        return true;
     }
 
-    public void place(int newXCoordinate, int newYCoordinate, CardinalDirection newDirection) {
-        if (newXCoordinate > xLimit || newYCoordinate > yLimit) {
-            return;
+    public boolean place(int newXCoordinate, int newYCoordinate, CardinalDirection newDirection) {
+        if (newXCoordinate > xLimit || newYCoordinate > yLimit || newXCoordinate < 0 || newYCoordinate < 0) {
+            return false;
         }
         this.xCoordinate = newXCoordinate;
         this.yCoordinate = newYCoordinate;
         switch (newDirection) {
             case NORTH:
                 this.facingDirection = this.getNorthFacingDirection();
-                break;
+                return true;
             case EAST:
                 this.facingDirection = this.getEastFacingDirection();
-                break;
+                return true;
             case SOUTH:
                 this.facingDirection = this.getSouthFacingDirection();
-                break;
+                return true;
             case WEST:
                 this.facingDirection = this.getWestFacingDirection();
-                break;
+                return true;
             case UNDEFINED:
-                break;
+                return true;
         }
+        return false;
     }
 
     public int getxLimit() {

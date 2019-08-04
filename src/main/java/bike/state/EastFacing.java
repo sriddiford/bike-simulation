@@ -12,20 +12,24 @@ public class EastFacing implements FacingDirection {
     }
 
     @Override
-    public void forward() {
+    public boolean forward() {
         if (virtualBike.getxCoordinate() < virtualBike.getxLimit()) {
             virtualBike.setxCoordinate(virtualBike.getxCoordinate() + 1);
+            return true;
         }
+        return false;
     }
 
     @Override
-    public void turnLeft() {
+    public boolean turnLeft() {
         virtualBike.setFacingDirection(virtualBike.getNorthFacingDirection());
+        return true;
     }
 
     @Override
-    public void turnRight() {
+    public boolean turnRight() {
         virtualBike.setFacingDirection(virtualBike.getSouthFacingDirection());
+        return true;
     }
 
     @Override

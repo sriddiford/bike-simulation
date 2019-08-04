@@ -15,7 +15,7 @@ public class VirtualRider {
         this.instruction = instruction;
     }
 
-    public void completeInstruction() {
-        instruction.execute();
+    public boolean completeInstruction() {
+        return instruction.execute();
     }
 }

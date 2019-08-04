@@ -43,7 +43,7 @@ public class VirtualBikeOutputTest {
         VirtualBike virtualBike = new VirtualBike(1, 2);
         virtualBike.setFacingDirection(new SouthFacing(virtualBike));
         virtualBike.GPSReport();
-        assertThat(outContent.toString()).isEqualTo("(1,2), SOUTH");
+        assertThat(outContent.toString()).isEqualTo("(1,2), SOUTH\n");
     }
 
     @Test
@@ -65,11 +65,11 @@ public class VirtualBikeOutputTest {
         Instruction gpsReport = new GPSReportInstruction(virtualBike);
         rider.setInstruction(gpsReport);
         rider.completeInstruction();
-        assertThat(outContent.toString()).isEqualTo("(6,5), EAST");
+        assertThat(outContent.toString()).isEqualTo("(6,5), EAST\n");
     }
 
     @Test
-    public void badPlaceTest() {
+    public void badPlaceTestExceedLimit() {
         VirtualBike virtualBike = new VirtualBike(1, 2);
         virtualBike.setFacingDirection(new NorthFacing(virtualBike));
         Instruction placeInstruction = new PlaceInstruction(virtualBike, 8, 8, CardinalDirection.EAST);
@@ -79,10 +79,22 @@ public class VirtualBikeOutputTest {
         rider.completeInstruction();
 
         virtualBike.GPSReport();
-        assertThat(outContent.toString()).isEqualTo("(1,2), NORTH");
+        assertThat(outContent.toString()).isEqualTo("(1,2), NORTH\n");
     }
 
+    @Test
+    public void badPlaceTestLessThanZero() {
+        VirtualBike virtualBike = new VirtualBike(1, 2);
+        virtualBike.setFacingDirection(new NorthFacing(virtualBike));
+        Instruction placeInstruction = new PlaceInstruction(virtualBike, -1, -1, CardinalDirection.EAST);
 
+        VirtualRider rider = new VirtualRider();
+        rider.setInstruction(placeInstruction);
+        rider.completeInstruction();
+
+        virtualBike.GPSReport();
+        assertThat(outContent.toString()).isEqualTo("(1,2), NORTH\n");
+    }
 
 
 

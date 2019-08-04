@@ -11,7 +11,7 @@ public class GPSReportInstruction implements Instruction {
     }
 
     @Override
-    public void execute() {
-        virtualBike.GPSReport();
+    public boolean execute() {
+        return virtualBike.GPSReport();
     }
 }

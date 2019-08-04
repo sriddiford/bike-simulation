@@ -19,7 +19,7 @@ public class PlaceInstruction implements Instruction {
     }
 
     @Override
-    public void execute() {
-        virtualBike.place(newXCoordinate, newYCoordinate, newDirection);
+    public boolean execute() {
+        return virtualBike.place(newXCoordinate, newYCoordinate, newDirection);
     }
 }

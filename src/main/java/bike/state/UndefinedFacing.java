@@ -5,18 +5,18 @@ import bike.state.FacingDirection;
 public class UndefinedFacing implements FacingDirection {
 
     @Override
-    public void forward() {
-        // empty body
+    public boolean forward() {
+        return false;
     }
 
     @Override
-    public void turnLeft() {
-        // empty body
+    public boolean turnLeft() {
+        return false;
     }
 
     @Override
-    public void turnRight() {
-        // empty body
+    public boolean turnRight() {
+        return false;
     }
 
     @Override

@@ -2,10 +2,10 @@ package bike.state;
 
 public interface FacingDirection {
 
-    public void forward();
+    boolean forward();
 
-    public void turnLeft();
+    boolean turnLeft();
 
-    public void turnRight();
+    boolean turnRight();
 
 }

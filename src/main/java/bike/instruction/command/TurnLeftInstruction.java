@@ -11,7 +11,7 @@ public class TurnLeftInstruction implements Instruction {
     }
 
     @Override
-    public void execute() {
-        virtualBike.turnLeft();
+    public boolean execute() {
+        return virtualBike.turnLeft();
     }
 }

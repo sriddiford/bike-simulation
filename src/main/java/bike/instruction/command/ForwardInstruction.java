@@ -11,7 +11,7 @@ public class ForwardInstruction implements Instruction {
     }
 
     @Override
-    public void execute() {
-        virtualBike.forward();
+    public boolean execute() {
+        return virtualBike.forward();
     }
 }
