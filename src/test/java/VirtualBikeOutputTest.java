@@ -13,33 +13,33 @@ import java.io.PrintStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class VirtualBikeOutputTest {
+class VirtualBikeOutputTest {
 
     // holds System.out output
     private static ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private static final PrintStream originalOut = System.out;
 
     @BeforeEach
-    public void setUpStreams() {
+    void setUpStreams() {
         // redirects System.out to allow its output to be tested
         outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
     }
 
     @AfterAll
-    public static void restoreStreams() {
+    static void restoreStreams() {
         // restore System.out to original output stream after all tests
         System.setOut(originalOut);
     }
 
     @Test
-    public void out() {
+    void out() {
         System.out.print("Test");
         assertThat(outContent.toString()).isEqualTo("Test");
     }
 
     @Test
-    public void gpsReportFormatTest() {
+    void gpsReportFormatTest() {
         VirtualBike virtualBike = new VirtualBike(1, 2);
         virtualBike.setFacingDirection(new SouthFacing(virtualBike));
         virtualBike.GPSReport();
@@ -47,13 +47,13 @@ public class VirtualBikeOutputTest {
     }
 
     @Test
-    public void defaultFacingDirectionTest() {
+    void defaultFacingDirectionTest() {
         VirtualBike bike = new VirtualBike(1, 2);
         assertThat(bike.getFacingDirection().toString()).isEqualTo("NORTH");
     }
 
     @Test
-    public void placeTest() {
+    void placeTest() {
         VirtualBike virtualBike = new VirtualBike(1, 2);
         virtualBike.setFacingDirection(new NorthFacing(virtualBike));
         Instruction placeInstruction = new PlaceInstruction(virtualBike, 6, 5, CardinalDirection.EAST);
@@ -69,7 +69,7 @@ public class VirtualBikeOutputTest {
     }
 
     @Test
-    public void badPlaceTestExceedLimit() {
+    void badPlaceTestExceedLimit() {
         VirtualBike virtualBike = new VirtualBike(1, 2);
         virtualBike.setFacingDirection(new NorthFacing(virtualBike));
         Instruction placeInstruction = new PlaceInstruction(virtualBike, 8, 8, CardinalDirection.EAST);
@@ -83,7 +83,7 @@ public class VirtualBikeOutputTest {
     }
 
     @Test
-    public void badPlaceTestLessThanZero() {
+    void badPlaceTestLessThanZero() {
         VirtualBike virtualBike = new VirtualBike(1, 2);
         virtualBike.setFacingDirection(new NorthFacing(virtualBike));
         Instruction placeInstruction = new PlaceInstruction(virtualBike, -1, -1, CardinalDirection.EAST);
@@ -96,10 +96,4 @@ public class VirtualBikeOutputTest {
         assertThat(outContent.toString()).isEqualTo("(1,2), NORTH\n");
     }
 
-
-
-    @Test
-    public void southWest() {
-
-    }
 }

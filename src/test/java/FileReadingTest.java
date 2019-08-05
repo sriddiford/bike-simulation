@@ -8,33 +8,32 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
-import java.util.Arrays;
 import java.util.Scanner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class FileReadingTest {
+class FileReadingTest {
 
     private static ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private static final PrintStream originalOut = System.out;
 
-    public static final String TEST_RESOURCES_FOLDER = "src/test/resources/";
+    private static final String TEST_RESOURCES_FOLDER = "src/test/resources/";
 
     @BeforeEach
-    public void setUpStreams() {
+    void setUpStreams() {
         // redirects System.out to allow its output to be tested
         outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
     }
 
     @AfterAll
-    public static void restoreStreams() {
+    static void restoreStreams() {
         // restore System.out to original output stream after all tests
         System.setOut(originalOut);
     }
 
     @Test
-    public void example1Test() throws FileNotFoundException {
+    void example1Test() throws FileNotFoundException {
         String filename = "Example1.txt";
         File file = new File(TEST_RESOURCES_FOLDER + filename);
         Scanner scanner = new Scanner(file);
@@ -48,7 +47,7 @@ public class FileReadingTest {
     }
 
     @Test
-    public void example2Test() throws FileNotFoundException {
+    void example2Test() throws FileNotFoundException {
         String filename = "Example2.txt";
         File file = new File(TEST_RESOURCES_FOLDER + filename);
         Scanner scanner = new Scanner(file);
@@ -62,7 +61,7 @@ public class FileReadingTest {
     }
 
     @Test
-    public void example3Test() throws FileNotFoundException {
+    void example3Test() throws FileNotFoundException {
         String filename = "Example3.txt";
         File file = new File(TEST_RESOURCES_FOLDER + filename);
         Scanner scanner = new Scanner(file);
@@ -76,7 +75,7 @@ public class FileReadingTest {
     }
 
     @Test
-    public void fileNotFoundTest() throws FileNotFoundException {
+    void fileNotFoundTest() throws FileNotFoundException {
         String[] args = {"I don't exist"};
         VirtualBike bike = new VirtualBike(1, 2);
         Simulation simulation = new Simulation(bike);

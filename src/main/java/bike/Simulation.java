@@ -33,9 +33,9 @@ public final class Simulation {
                 return;
             }
         } else {
+            System.out.print("Please enter bike commands:\n");
             scanner = new Scanner(System.in);
         }
-        System.out.print("Please enter bike commands:\n");
         VirtualBike bike = new VirtualBike(0,0);
         Simulation simulation = new Simulation(bike);
         while (scanner.hasNext()) {

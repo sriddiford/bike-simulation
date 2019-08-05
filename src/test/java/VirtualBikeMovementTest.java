@@ -11,10 +11,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class VirtualBikeMovementTest {
+class VirtualBikeMovementTest {
 
     @Test
-    public void turnRightTest() {
+    void turnRightTest() {
         // turns right 4 time successively initially facing North
         VirtualBike bike = new VirtualBike(1, 7);
         Instruction turnRightInstruction = new TurnRightInstruction(bike);
@@ -28,7 +28,7 @@ public class VirtualBikeMovementTest {
     }
 
     @Test
-    public void turnsLeftTest() {
+    void turnsLeftTest() {
         // turns left 4 time successively initially facing North
         VirtualBike bike = new VirtualBike(1, 7);
         Instruction turnLeftInstruction = new TurnLeftInstruction(bike);
@@ -42,7 +42,7 @@ public class VirtualBikeMovementTest {
     }
 
     @Test
-    public void southMoveForwardTest() {
+    void southMoveForwardTest() {
         VirtualBike virtualBike = new VirtualBike(1, 2);
         virtualBike.setFacingDirection(virtualBike.getSouthFacingDirection());
 
@@ -57,7 +57,7 @@ public class VirtualBikeMovementTest {
     }
 
     @Test
-    public void northMoveForwardTest() {
+    void northMoveForwardTest() {
         VirtualBike virtualBike = new VirtualBike(1, 2);
         virtualBike.setFacingDirection(virtualBike.getNorthFacingDirection());
 
@@ -72,7 +72,7 @@ public class VirtualBikeMovementTest {
     }
 
     @Test
-    public void eastMoveForwardTest() {
+    void eastMoveForwardTest() {
         VirtualBike virtualBike = new VirtualBike(1, 2);
         virtualBike.setFacingDirection(virtualBike.getEastFacingDirection());
 
@@ -87,7 +87,7 @@ public class VirtualBikeMovementTest {
     }
 
     @Test
-    public void westMoveForwardTest() {
+    void westMoveForwardTest() {
         VirtualBike virtualBike = new VirtualBike(1, 2);
         virtualBike.setFacingDirection(virtualBike.getWestFacingDirection());
 
@@ -102,7 +102,7 @@ public class VirtualBikeMovementTest {
     }
 
     @Test
-    public void northWestCornerTest() {
+    void northWestCornerTest() {
         // should stay in nw corner when moving north, turning left, and trying to move forward (west) again
         int yLimit = 7;
         VirtualBike bike = new VirtualBike(0, yLimit);
@@ -128,7 +128,7 @@ public class VirtualBikeMovementTest {
     }
 
     @Test
-    public void southEastCornerTest() {
+    void southEastCornerTest() {
         // should stay in se corner when moving south, turning left, and trying to move forward (east) again
         int xLimit = 7;
         VirtualBike bike = new VirtualBike(xLimit, 0);

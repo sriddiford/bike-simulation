@@ -1,16 +1,16 @@
 import bike.VirtualBike;
 import bike.direction.CardinalDirection;
-import bike.instruction.*;
+import bike.instruction.InstructionFactory;
+import bike.instruction.TextFileInstructionFactory;
 import bike.instruction.command.*;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.in;
 
-public class InstructionFactoryTest {
+class InstructionFactoryTest {
 
     @Test
-    public void shouldReturnForwardInstruction() {
+    void shouldReturnForwardInstruction() {
         String input = "FORWARD";
         VirtualBike bike = new VirtualBike(1, 2);
         InstructionFactory instructionFactory = new TextFileInstructionFactory(bike);
@@ -19,7 +19,7 @@ public class InstructionFactoryTest {
     }
 
     @Test
-    public void shouldReturnTurnLeftInstruction() {
+    void shouldReturnTurnLeftInstruction() {
         String input = "TURN_LEFT";
         VirtualBike bike = new VirtualBike(1, 2);
         InstructionFactory instructionFactory = new TextFileInstructionFactory(bike);
@@ -28,7 +28,7 @@ public class InstructionFactoryTest {
     }
 
     @Test
-    public void shouldReturnTurnRightInstruction() {
+    void shouldReturnTurnRightInstruction() {
         String input = "TURN_RIGHT";
         VirtualBike bike = new VirtualBike(1, 2);
         InstructionFactory instructionFactory = new TextFileInstructionFactory(bike);
@@ -37,7 +37,7 @@ public class InstructionFactoryTest {
     }
 
     @Test
-    public void shouldReturnGPSReportInstruction() {
+    void shouldReturnGPSReportInstruction() {
         String input = "GPS_REPORT";
         VirtualBike bike = new VirtualBike(1, 2);
         InstructionFactory instructionFactory = new TextFileInstructionFactory(bike);
@@ -46,7 +46,7 @@ public class InstructionFactoryTest {
     }
 
     @Test
-    public void shouldReturnPlaceInstruction() {
+    void shouldReturnPlaceInstruction() {
         String input = "PLACE 0,0,NORTH";
         VirtualBike bike = new VirtualBike(1, 2);
         InstructionFactory instructionFactory = new TextFileInstructionFactory(bike);
@@ -55,7 +55,7 @@ public class InstructionFactoryTest {
     }
 
     @Test
-    public void noDirectionPlaceTest() {
+    void noDirectionPlaceTest() {
         String input = "PLACE 1,2,";
         VirtualBike bike = new VirtualBike(1,2);
         InstructionFactory factory = new TextFileInstructionFactory(bike);
@@ -64,7 +64,7 @@ public class InstructionFactoryTest {
     }
 
     @Test
-    public void emptyStringInstructionTest() {
+    void emptyStringInstructionTest() {
         String input = "";
         VirtualBike bike = new VirtualBike(1,2);
         InstructionFactory factory = new TextFileInstructionFactory(bike);
@@ -73,7 +73,7 @@ public class InstructionFactoryTest {
     }
 
     @Test
-    public void invalidInstructionTest() {
+    void invalidInstructionTest() {
         String input = "Go bike, go!";
         VirtualBike bike = new VirtualBike(1,2);
         InstructionFactory factory = new TextFileInstructionFactory(bike);
