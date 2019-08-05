@@ -1,5 +1,20 @@
 # bike-simulation
-Bike Simulator
+
+## General Description
+This command line application simulates a bike driving on a 7 x 7 grid.
+
+The application accepts the following case sensitive instructions:
+* FORWARD
+* TURN_RIGHT
+* TURN_LEFT
+* PLACE (X),(Y),(CARDINAL DIRECTION) (e.g. PLACE 1,2,NORTH)
+* GPS_REPORT
+
+## Why was this exercise chosen?
+
+This exercise was chosen because I believe it allowed me to demonstrate object oriented design and application most effectively. The problem naturally lent itself to two main design patterns; the State Pattern and the Command Pattern. Using these design patterns allowed the code to be more easily reasoned about and open to additional future features.
+
+
 
 ## Running the program
 ``` Shell
