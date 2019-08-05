@@ -59,3 +59,5 @@ E.g.
 ```
 java -jar target/bike-simulation.jar ~/Documents/instructions.txt
 ```
+
+To exit the program, enter the EOF character for your OS e.g. CTRL + D for Unix, CTRL + Z for Windows
