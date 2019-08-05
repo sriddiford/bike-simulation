@@ -32,7 +32,7 @@ The state objects controlling the state transition does create coupling between 
 
 The Command pattern was used as this decoupled the VirtualBike class from the Instruction class. A VirtualRider class was created instead that would execute the command objects for the bike. While initially this does provide an extra layer of abstraction between the VirtualBike and Instruction classes, this would allow additional future features to be added more easily.
 
-The code could have been made more compact by representing the Instruction object methods as lamdas instead however this also was not chosen to allow ease of adding additional features.
+The code could have been made more compact by representing the Instruction object methods as lamdas instead however this also was not chosen to allow ease of adding additional features e.g. the ability to add another method to the interface.
 
 For example, the ability for the VirtualBike to have a history of executed commands and provide an "undo" feature that would support issuing it an UNDO command to revert it to its previous state. Implementing this feature would be as simple as adding a undo() method to the Instruction interface and having the VirtualRider class hold a stack of executed commands to pop off as the UNDO command is issued. The Instruction objects would delegate any calls of undo() to the bike which would perform the actions required to revert it its previous state. This would be trivial for TURN_LEFT commands and TURN-RIGHT commands and require only slightly more work for FORWARD commands.
 
