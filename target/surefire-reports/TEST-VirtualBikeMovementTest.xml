@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="VirtualBikeMovementTest" time="0.004" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="VirtualBikeMovementTest" time="0.005" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.specification.version" value="10"/>
@@ -15,7 +15,7 @@
     <property name="os.name" value="Linux"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/mnt/c/Users/Steve/Dropbox/Development/bike-simulator/target/surefire/surefirebooter13537232824178302989.jar /mnt/c/Users/Steve/Dropbox/Development/bike-simulator/target/surefire 2019-08-05T01-33-08_961-jvmRun1 surefire1056125426365830889tmp surefire_01577184739741840644tmp"/>
+    <property name="sun.java.command" value="/mnt/c/Users/Steve/Dropbox/Development/bike-simulator/target/surefire/surefirebooter18422944996069593916.jar /mnt/c/Users/Steve/Dropbox/Development/bike-simulator/target/surefire 2019-08-05T02-53-05_122-jvmRun1 surefire7401318674550085980tmp surefire_09943067077577163003tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/mnt/c/Users/Steve/Dropbox/Development/bike-simulator/target/test-classes:/mnt/c/Users/Steve/Dropbox/Development/bike-simulator/target/classes:/home/steven/.m2/repository/org/assertj/assertj-core/3.12.2/assertj-core-3.12.2.jar:/home/steven/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.1/junit-jupiter-api-5.5.1.jar:/home/steven/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/steven/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/steven/.m2/repository/org/junit/platform/junit-platform-commons/1.5.1/junit-platform-commons-1.5.1.jar:/home/steven/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.1/junit-jupiter-engine-5.5.1.jar:/home/steven/.m2/repository/org/junit/platform/junit-platform-engine/1.5.1/junit-platform-engine-1.5.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/mnt/c/Users/Steve/Dropbox/Development/bike-simulator/target/surefire/surefirebooter13537232824178302989.jar"/>
+    <property name="surefire.real.class.path" value="/mnt/c/Users/Steve/Dropbox/Development/bike-simulator/target/surefire/surefirebooter18422944996069593916.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="10.0.2+13-Ubuntu-1ubuntu0.18.04.4"/>
     <property name="user.name" value="steven"/>
@@ -61,7 +61,7 @@
   <testcase name="northWestCornerTest" classname="VirtualBikeMovementTest" time="0"/>
   <testcase name="turnRightTest" classname="VirtualBikeMovementTest" time="0"/>
   <testcase name="southMoveForwardTest" classname="VirtualBikeMovementTest" time="0.001"/>
-  <testcase name="northMoveForwardTest" classname="VirtualBikeMovementTest" time="0.001"/>
-  <testcase name="southEastCornerTest" classname="VirtualBikeMovementTest" time="0.001"/>
-  <testcase name="westMoveForwardTest" classname="VirtualBikeMovementTest" time="0"/>
+  <testcase name="northMoveForwardTest" classname="VirtualBikeMovementTest" time="0"/>
+  <testcase name="southEastCornerTest" classname="VirtualBikeMovementTest" time="0"/>
+  <testcase name="westMoveForwardTest" classname="VirtualBikeMovementTest" time="0.001"/>
 </testsuite>

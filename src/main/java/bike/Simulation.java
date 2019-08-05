@@ -36,11 +36,9 @@ public final class Simulation {
             System.out.print("Please enter bike commands:\n");
             scanner = new Scanner(System.in);
         }
-        VirtualBike bike = new VirtualBike(0,0);
-        Simulation simulation = new Simulation(bike);
         while (scanner.hasNext()) {
             String input = scanner.nextLine();
-            simulation.simulateInstruction(input);
+            simulateInstruction(input);
         }
     }
 
