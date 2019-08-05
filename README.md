@@ -16,5 +16,10 @@ java -jar target/bike-simulation.jar
 
 For input from a file, run the following command:
 ```
-java -jar target/bike-simulation.jar <filename>
+java -jar target/bike-simulation.jar <file location>
+```
+
+E.g.
+```
+java -jar target/bike-simulation.jar ~/Documents/instructions.txt
 ```
